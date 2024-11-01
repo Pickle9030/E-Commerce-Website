@@ -1,0 +1,122 @@
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 1.5% 1% 1.5%;
+  background-color: #171717;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #f29c12;
+}
+
+/* Cart and Profile */
+.cart-profile {
+  display: flex;
+  align-items: center;
+}
+
+/* Cart */
+.cart {
+  position: relative; /* Make cart container relative for badge positioning */
+  margin-right: 20px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+}
+
+.cart-pic {
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  color: #f29c12;
+}
+.cart-pic:hover {
+  color: #e67e22;
+}
+.cart-badge {
+  background-color: #333;
+  color: #f29c12;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 14px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+/* Profile */
+.profile {
+  width: 40px; /* Circle width */
+  height: 40px; /* Circle height */
+  border-radius: 50%; /* Circle shape */
+  overflow: hidden; /* Ensure image stays within circle */
+}
+
+/* Profile Picture */
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes the image a circle */
+  object-fit: cover; /* Ensures the image covers the circle, cropping if necessary */
+  display: block;
+}
+
+/* Dropdown */
+.dropdown {
+  display: none; /* Hide by default */
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: #171717;
+  color: #333;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.dropdown a {
+  color: #f29c12;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown a:hover {
+  background-color: #272727;
+}
+
+/* Show dropdown on profile hover */
+.profile:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+/* Profile button */
+.profile button {
+  color: #272727;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .cart-profile {
+    margin-top: 10px; /* Add margin for separation */
+  }
+}

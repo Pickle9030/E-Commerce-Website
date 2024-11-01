@@ -1,0 +1,11 @@
+/* Footer */
+footer {
+  background-color: #171717;
+  color: #f39c12;
+  padding: 1% 0 1% 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
